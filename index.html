@@ -1,25 +1,35 @@
-
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html>
  <head>
   <meta charset="utf-8">
-  <title>VFD Nixie Clock</title>
+  <title>devICEclock</title>
   <style>
-  body {
+    body {
 background-color: #000000
 }
    .fig {
-    text-align: center; /* Выравнивание по центру */ 
+    display: block; /* Блочный элемент (для старых браузеров) */
+    text-align: center; /* Выравнивание по центру */
+    font-style: italic; /* Курсивное начертание */
+    margin-top: 50; /* Отступ сверху */
+    margin-bottom: 50; /* Отступ снизу */
+    color: #666; /* Цвет подрисуночной подписи */
    }
   </style>
+  <!--[if lt IE 9]>
+   <script>
+    document.createElement('figure');
+    document.createElement('figcaption');
+   </script>
+  <![endif]-->
  </head>
  <body>
-  <p>
-  
-  
-  </p>
-  <p class="fig"><img src="image.png" 
-   width="807" height="136" alt="Фотография"></p>
-  
+  <figure class="fig">
+   <img src="image.png" width="807" height="136" 
+   alt="devICEclock">
+   <figcaption>
+    Deviceclock - VFD Nixie Clock
+   </figcaption>
+  </figure>
  </body>
 </html>
