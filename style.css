@@ -206,3 +206,95 @@ footer {
     border-color: var(--accent-color);
     box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
 }
+
+/* Стили для страницы-заглушки инструкции */
+.manual-stub {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.stub-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.manual-stub h1 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+/* Прогресс-бар */
+.progress-container {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    height: 12px;
+    width: 100%;
+    margin: 30px 0 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--accent-dim), var(--accent-color));
+    height: 100%;
+    width: 70%; /* Процент готовности */
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+    animation: pulseGlow 2s infinite alternate;
+}
+
+.progress-text {
+    font-size: 14px;
+    color: #8a99ad;
+    margin-bottom: 40px;
+}
+
+/* Список будущих разделов */
+.stub-notice {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 25px;
+    text-align: left;
+}
+
+.stub-notice h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.stub-notice ul {
+    list-style-type: none;
+}
+
+.stub-notice li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    color: #e2e8f0;
+}
+
+/* Маленькие бирюзовые точки вместо стандартных маркеров списка */
+.stub-notice li::before {
+    content: "•";
+    color: var(--accent-color);
+    font-size: 20px;
+    position: absolute;
+    left: 5px;
+    top: -2px;
+}
+
+/* Анимация мягкого свечения прогресс-бара */
+@keyframes pulseGlow {
+    from {
+        box-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
+    }
+    to {
+        box-shadow: 0 0 15px rgba(0, 242, 254, 0.8);
+    }
+}
