@@ -126,3 +126,12 @@ footer {
     color: #64748b;
     font-size: 14px;
 }
+/* Стиль для логотипа на главной */
+.hero-logo {
+    max-width: 200px; /* Ограничим максимальную ширину */
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
