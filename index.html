@@ -1,35 +1,52 @@
-   <!DOCTYPE html>
-<html>
- <head>
-  <meta charset="utf-8">
-  <title>devICEclock</title>
-  <style>
-    body {
-background-color: #000000
-}
-   .fig {
-    display: block; /* Блочный элемент (для старых браузеров) */
-    text-align: center; /* Выравнивание по центру */
-    font-style: italic; /* Курсивное начертание */
-    margin-top: 50; /* Отступ сверху */
-    margin-bottom: 50; /* Отступ снизу */
-    color: #666; /* Цвет подрисуночной подписи */
-   }
-  </style>
-  <!--[if lt IE 9]>
-   <script>
-    document.createElement('figure');
-    document.createElement('figcaption');
-   </script>
-  <![endif]-->
- </head>
- <body>
-  <figure class="fig">
-   <img src="image.png" width="807" height="136" 
-   alt="devICEclock">
-   <figcaption>
-    Deviceclock - VFD Nixie Clock
-   </figcaption>
-  </figure>
- </body>
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeviceClock — DIY VFD Часы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">DeviceClock</div>
+            <nav>
+                <a href="index.html" class="active">Главная</a>
+                <a href="photo.html">Фото</a>
+                <a href="manual.html">Инструкция</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Электронные часы на VFD дисплее</h1>
+            <p class="subtitle">Современная электроника в эстетике советского ретро-футуризма.</p>
+        </section>
+
+        <section class="about">
+            <h2>О проекте</h2>
+            <p>Добро пожаловать на страницу DIY-проекта настольных электронных часов! Сердцем этих часов являются вакуумно-люминесцентные индикаторы (VFD), которые излучают мягкое, завораживающее бирюзовое свечение.</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Ретро-эстетика</h3>
+                    <p>Аутентичные VFD-дисплеи создают уникальную атмосферу в интерьере.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>DIY Сборка</h3>
+                    <p>Проект разработан для самостоятельной сборки: от пайки плат до прошивки.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Точность</h3>
+                    <p>Современная схема тактирования обеспечивает минимальную погрешность хода.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 deviceclock.ru. Сделано с любовью к электронике.</p>
+    </footer>
+</body>
 </html>
