@@ -309,3 +309,21 @@ footer {
         box-shadow: 0 0 15px rgba(0, 242, 254, 0.8);
     }
 }
+/* Стили для блоков аксессуаров */
+.accessory {
+    position: relative;
+    border-color: var(--accent-dim);
+}
+
+.accessory-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(15, 17, 21, 0.8);
+    color: var(--accent-color);
+    padding: 8px;
+    font-size: 13px;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
