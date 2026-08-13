@@ -128,10 +128,11 @@ footer {
 }
 /* Стиль для логотипа на главной */
 .hero-logo {
-    max-width: 200px; /* Ограничим максимальную ширину */
+    max-width: 450px; /* Увеличь это число (было 200px) */
     width: 100%;
     height: auto;
     margin-bottom: 20px;
     display: inline-block;
 }
+
 
