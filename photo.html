@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотогалерея — DeviceClock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">DeviceClock</div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="photo.html" class="active">Фото</a>
+                <a href="manual.html">Инструкция</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="gallery-section">
+            <h1>Галерея проекта</h1>
+            <p class="subtitle">Внешний вид готового устройства, печатных плат и процесса сборки.</p>
+
+            <div class="photo-grid">
+                <!-- Карточка 1 -->
+                <div class="photo-card">
+                    <img src="clock-front.jpg" alt="Часы VFD вид спереди">
+                    <div class="photo-desc">Готовые часы — вид спереди</div>
+                </div>
+                <!-- Карточка 2 -->
+                <div class="photo-card">
+                    <img src="clock-glow.jpg" alt="Свечение индикаторов в темноте">
+                    <div class="photo-desc">Бирюзовое свечение в темноте</div>
+                </div>
+                <!-- Карточка 3 -->
+                <div class="photo-card">
+                    <img src="pcb-board.jpg" alt="Печатная плата часов">
+                    <div class="photo-desc">Печатная плата (PCB) после пайки</div>
+                </div>
+                <!-- Карточка 4 -->
+                <div class="photo-card">
+                    <img src="case-assembly.jpg" alt="Процесс сборки корпуса">
+                    <div class="photo-desc">Сборка элементов корпуса</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 deviceclock.ru. Сделано с любовью к электронике.</p>
+    </footer>
+</body>
+</html>
