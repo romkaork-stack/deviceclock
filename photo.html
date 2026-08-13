@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фотогалерея — DeviceClock</title>
+    <title>Фотогалерея — devICEclock</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container header-content">
-           <div class="logo">
-    dev<span class="highlight">ICE</span>clock
-</div>
+            <div class="logo">dev<span class="highlight">ICE</span>clock</div>
             <nav>
                 <a href="index.html">Главная</a>
                 <a href="photo.html" class="active">Фото</a>
@@ -23,10 +21,26 @@
     <main class="container">
         <section class="gallery-section">
             <h1>Галерея проекта</h1>
-            <p class="subtitle">Фотографии готового устройства и процесса сборки.</p>
+            <p class="subtitle">Фотографии устройства, аксессуаров и процесса создания.</p>
 
-            <!-- Сюда JavaScript будет сам добавлять картинки -->
+            <!-- Основная сетка фото из папки photos -->
             <div class="photo-grid" id="gallery"></div>
+
+            <!-- Новые блоки: Радиодатчик и Пульт -->
+            <h2 style="margin-top: 60px; color: #fff;">Аксессуары</h2>
+            <div class="photo-grid">
+                <!-- Блок Радиодатчика -->
+                <div class="photo-card-simple accessory">
+                    <img src="photos/sensor.jpg" alt="Радиодатчик температуры" onerror="this.src='https://placeholder.com🌡️+Sensor'">
+                    <div class="accessory-label">Радиодатчик температуры</div>
+                </div>
+                
+                <!-- Блок Пульта управления -->
+                <div class="photo-card-simple accessory">
+                    <img src="photos/remote.jpg" alt="Беспроводной пульт" onerror="this.src='https://placeholder.com🎮+Remote'">
+                    <div class="accessory-label">Беспроводной пульт</div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -35,23 +49,16 @@
     </footer>
 
     <script>
-        // Укажи здесь, сколько ВСЕГО картинок у тебя сейчас в папке
-        const totalPhotos = 6; 
-        
+        const totalPhotos = 6; // Твое текущее количество фото в папке photos
         const galleryContainer = document.getElementById('gallery');
 
         for (let i = 1; i <= totalPhotos; i++) {
-            // Создаем обертку для фото
             const photoCard = document.createElement('div');
             photoCard.className = 'photo-card-simple';
-
-            // Создаем саму картинку
             const img = document.createElement('img');
-            img.src = `photos/${i}.jpg`; // Путь к картинке в папке
+            img.src = `photos/${i}.jpg`;
             img.alt = `Фото проекта ${i}`;
-            img.loading = 'lazy'; // Картинки будут подгружаться плавно при скролле
-
-            // Собираем элементы вместе
+            img.loading = 'lazy';
             photoCard.appendChild(img);
             galleryContainer.appendChild(photoCard);
         }
