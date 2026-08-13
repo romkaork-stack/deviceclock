@@ -184,3 +184,25 @@ footer {
     box-shadow: 0 5px 15px rgba(0, 242, 254, 0.1);
 }
 
+/* Стили для галереи без подписей */
+.photo-card-simple {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1; /* Делает все ячейки строго квадратными */
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.photo-card-simple img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-card-simple:hover {
+    transform: scale(1.03); /* Картинка будет изящно увеличиваться при наведении */
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+}
