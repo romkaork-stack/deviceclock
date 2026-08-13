@@ -21,35 +21,38 @@
     <main class="container">
         <section class="gallery-section">
             <h1>Галерея проекта</h1>
-            <p class="subtitle">Внешний вид готового устройства, печатных плат и процесса сборки.</p>
+            <p class="subtitle">Фотографии готового устройства и процесса сборки.</p>
 
-            <div class="photo-grid">
-                <!-- Карточка 1 -->
-                <div class="photo-card">
-                    <img src="clock-front.jpg" alt="Часы VFD вид спереди">
-                    <div class="photo-desc">Готовые часы — вид спереди</div>
-                </div>
-                <!-- Карточка 2 -->
-                <div class="photo-card">
-                    <img src="clock-glow.jpg" alt="Свечение индикаторов в темноте">
-                    <div class="photo-desc">Бирюзовое свечение в темноте</div>
-                </div>
-                <!-- Карточка 3 -->
-                <div class="photo-card">
-                    <img src="pcb-board.jpg" alt="Печатная плата часов">
-                    <div class="photo-desc">Печатная плата (PCB) после пайки</div>
-                </div>
-                <!-- Карточка 4 -->
-                <div class="photo-card">
-                    <img src="case-assembly.jpg" alt="Процесс сборки корпуса">
-                    <div class="photo-desc">Сборка элементов корпуса</div>
-                </div>
-            </div>
+            <!-- Сюда JavaScript будет сам добавлять картинки -->
+            <div class="photo-grid" id="gallery"></div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 deviceclock.ru. Сделано с любовью к электронике.</p>
     </footer>
+
+    <script>
+        // Укажи здесь, сколько ВСЕГО картинок у тебя сейчас в папке
+        const totalPhotos = 6; 
+        
+        const galleryContainer = document.getElementById('gallery');
+
+        for (let i = 1; i <= totalPhotos; i++) {
+            // Создаем обертку для фото
+            const photoCard = document.createElement('div');
+            photoCard.className = 'photo-card-simple';
+
+            // Создаем саму картинку
+            const img = document.createElement('img');
+            img.src = `photos/${i}.jpg`; // Путь к картинке в папке
+            img.alt = `Фото проекта ${i}`;
+            img.loading = 'lazy'; // Картинки будут подгружаться плавно при скролле
+
+            // Собираем элементы вместе
+            photoCard.appendChild(img);
+            galleryContainer.appendChild(photoCard);
+        }
+    </script>
 </body>
 </html>
