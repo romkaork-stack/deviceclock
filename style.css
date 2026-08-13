@@ -45,10 +45,22 @@ header {
 }
 
 .logo {
-    font-size: 24px;
+    /* Название шрифта */
+    font-family: 'Magneto', 'Arial Black', sans-serif; 
+    font-size: 28px;
     font-weight: bold;
-    color: var(--accent-color);
-    text-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+    /* Основной цвет для маленьких букв - белый */
+    color: #ffffff; 
+    text-transform: none; /* Отключаем автоматический верхний регистр, если он был */
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Оформление для букв ICE */
+.logo .highlight {
+    color: var(--accent-color); /* Ваш текущий бирюзовый цвет */
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.6); /* Свечение, как у VFD */
+    text-transform: uppercase; /* Принудительно заглавные */
 }
 
 nav a {
